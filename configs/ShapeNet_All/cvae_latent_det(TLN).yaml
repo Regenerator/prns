@@ -1,0 +1,156 @@
+### Dataset configs ###
+path2data: /scratch/gpuhost7/rklokov/ShapeNet_All/
+grid_size: 32
+sample_grids: True
+
+### Dataset iterator configs ###
+batch_size: 120
+shuffle: true
+num_workers: 8
+
+### Image augmentation configs ###
+image_resize: false
+image_size:
+  - 128
+  - 128
+image_pad: false
+image_pad_size:
+  - 4
+  - 4
+image_add_grayscale: true
+image_normalize: true
+### resized 128 ###
+# image_means:
+#   - 0.06782313
+#   - 0.06382495
+#   - 0.06858795
+#   - 0.07437215
+#   - 0.1358406
+# image_stds:
+#   - 0.1861753
+#   - 0.18244216
+#   - 0.18851782
+#   - 0.19802927
+#   - 0.33522783
+### original 137 ###
+image_means:
+  - 0.0721759
+  - 0.067974
+  - 0.0729761
+  - 0.07907677
+  - 0.14440231
+image_stds:
+  - 0.19394321
+  - 0.19027685
+  - 0.19635864
+  - 0.20607402
+  - 0.34631108
+image_noise: false
+image_noise_scale: 0.033
+image_remove_alpha: true
+
+### Voxel grid augmentation configs ###
+voxel_normalize: false
+voxel_means:
+  - 0.91303676
+  - 0.08777921
+voxel_stds:
+  - 0.28303769
+  - 0.28303769
+voxel_noise: false
+voxel_noise_scale: 0.033
+
+### Network configs ###
+# Image encoder configs #
+img_n_views: 1
+img_init_channels: 4
+img_init_features: 32
+img_num_features:
+  - 64
+  - 64
+  - 128
+  - 128
+  - 256
+  - 256
+img_bottleneck_features: 1024
+img_latent_space_encoding: true
+img_latent_space_n_layers: 1
+
+# Voxel encoder configs #
+enc_init_channels: 2
+enc_init_features: 32
+enc_num_features:
+  - 64
+  - 128
+  - 256
+  - 256
+enc_bottleneck_features: 1024
+enc_conditioning: false
+enc_latent_space_n_layers: 1
+
+latent_space_size: 1024
+deterministic: true
+
+# Voxel decoder configs #
+dec_bottleneck_features: 1024
+dec_num_features:
+  - 256
+  - 256
+  - 128
+  - 64
+dec_final_features: 32
+dec_final_channels: 2
+dec_conditioning: false
+dec_latent_space_n_layers: 0
+
+# Trainigs configs #
+train_mode: tln
+prediction_mode: false
+
+kl_weight: 1.0
+label_smoothing_mode: None
+label_smoothing_rate: 0.033
+
+# resume: true
+# n_epochs: 17
+# min_lr: 0.000004
+# max_lr: 0.000004
+# beta1: 0.9
+# min_beta2: 0.9
+# max_beta2: 0.9
+# cycle_length: 8
+# wd: 0.000001
+
+threshold: 0.5
+training_metrics: true
+accuracy: true
+iou: true
+
+cat_names:
+  - 'Plane     '
+  - 'Bench     '
+  - 'Cabinet   '
+  - 'Car       '
+  - 'Chair     '
+  - 'Monitor   '
+  - 'Lamp      '
+  - 'Speaker   '
+  - 'Firearm   '
+  - 'Couch     '
+  - 'Table     '
+  - 'Cellphone '
+  - 'Watercraft'
+cat_idx:
+  - 0
+  - 809
+  - 1173
+  - 1488
+  - 2988
+  - 4344
+  - 4563
+  - 5027
+  - 5351
+  - 5826
+  - 6461
+  - 8163
+  - 8374
