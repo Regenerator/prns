@@ -36,7 +36,7 @@ Here is a complete list of training scripts and config names used to produce mod
 7. `train_TLN.py ./configs/ShapeNet_All/cvae_latent_det(TLN).yaml`
 8. `train_DVAE.py ./configs/ShapeNet_All/dvae_latent.yaml`
 
-Training procedure is equal for all the models and can be found in `train.sh`. This script is written for the best performing configuration of the PRNs (line 4), in order to use it with other configurations you should change the executable python file, use proper config file (for those use correspondances above of change config files) and provide a unique model name.
+Training procedure is equal for all the models and can be found in `train.sh`. This script is written for the best performing configuration of the PRNs (line 4), in order to use it with other configurations you should change the executable python file, use proper config file (for those use correspondances above or change the config files) and provide a unique model name.
 
 Finally, to train the chosen model run:
 ```
