@@ -40,7 +40,7 @@ Temporary Items
 OAR*
 
 # Dont want shell scripts
-*.sh
+# *.sh
 
 # Dont want nfs files
 .nfs*

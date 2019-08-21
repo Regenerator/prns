@@ -10,11 +10,11 @@ from lib.preprocessing.datasets import AllImagesDataset, AllGridDataset
 
 def define_options_parser():
     parser = argparse.ArgumentParser(
-        description='Data processor for ShapeNetAll dataset. All the data '
-        'is either accumulated in a single or in multiple .h5 file(s). '
-        '3D voxel occupancy grids are either turned into bitpacks. '
+        description='Data processor for ShapeNetAll dataset. '
+        'All the images are accumulated in a single .h5 file. '
+        '3D voxel occupancy grids are turned into bitpacks and are accumulated in another .h5 file. '
     )
-    parser.add_argument('data', help='Path to dataset')
+    parser.add_argument('data', help='Path to dataset (should contain ./ShapeNetRendering and ./ShapeNetVox32)')
     parser.add_argument('save', help='Path to directory to save the file')
     parser.add_argument('images', type=np.int, nargs='?', default=1,
                         help='Signal to process/not process images')

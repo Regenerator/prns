@@ -24,7 +24,6 @@ def define_options_parser():
     parser.add_argument('lr', help='Learining rate parameter value.')
     parser.add_argument('beta1', help='First moment accumulation parameter value.')
     parser.add_argument('beta2', help='Second moment accumulation parameter value.')
-    parser.add_argument('cycle_length', help='Cycle length for cyclic learning.')
     parser.add_argument('wd', help='Weight decay parameter value.')
     return parser
 
@@ -37,9 +36,9 @@ config['model_name'] = '{0}.pkl'.format(args.modelname)
 config['resume'] = True if args.resume == 'True' else False
 config['n_epochs'] = int(args.n_epochs)
 config['min_lr'] = config['max_lr'] = float(args.lr)
+config['cycle_length'] = 1
 config['beta1'] = float(args.beta1)
 config['min_beta2'] = config['max_beta2'] = float(args.beta2)
-config['cycle_length'] = int(args.cycle_length)
 config['wd'] = float(args.wd)
 print('Configurations loaded.')
 
