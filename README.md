@@ -50,7 +50,7 @@ Class specific evaluation of the IoU metric for test part of the dataset could b
 ```
 Evaluation is written for the best configuration of the model and could be changed, similarly to training script.
 
-Both training and evaluation scripts run python code with extra options, which can also be seen by running python code with `--help` option.
+Both training and evaluation scripts run python code with extra options, which can also be seen by running python files with `--help` option.
 
 ## Citation
 ```
