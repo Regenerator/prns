@@ -1,5 +1,6 @@
 # Probabilistic Reconstruction Networks
-This repository contains the code for the **"Probabilistic Reconstruction Networks for 3D Shape Inference from a Single Image"** [paper](https://arxiv.org/abs/1908.07475) accepted as Oral at British Machine Vision Conference 2019. It includes:
+This repository contains the code for the **"Probabilistic Reconstruction Networks for 3D Shape Inference from a Single Image"** [paper](https://arxiv.org/abs/1908.07475) presented as Oral at the 30th British Machine Vision Conference, 2019 and awarded with "Best Science Paper Honorable Mention".
+It includes:
 - a data processing script for the ShapeNet dataset (the data could be taken from [here](https://github.com/chrischoy/3D-R2N2));
 - training and IoU evaluation scripts for all the variations of Probabilistic Reconstruction Networks.
 
